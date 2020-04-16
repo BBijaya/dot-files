@@ -178,7 +178,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+        status_command i3-status
 	tray_output primary
 }
 
@@ -195,8 +195,27 @@ exec --no-startup-id nm-applet &
 # xfce4 power manager
 exec --no-startup-id "xfce4-power-manager &"
 # launching udiskie |  removeable media automounter
-exec --no-start-up-id udiskie & 
+exec --no-start-up-id "udiskie -n -s &" 
 # launching feh to set wallpaper
-exec --no-startup-id feh --randomize --bg-fill Pictures/wallpapersa
+exec --no-startup-id feh --randomize --bg-fill Pictures/wallpapers
 
-# just a comment
+
+# floating window size constraints
+# preventing floating window from flowing out of screen
+floating_maximum_size -1 x -1
+
+
+# boarder style for windows
+# border style for tiled windows
+default_border pixel 1
+# boarder style for floating windows
+default_floating_border normal
+
+# hiding border adjacent to screen edges
+hide_edge_borders smart
+
+
+
+
+
+
