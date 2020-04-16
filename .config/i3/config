@@ -195,7 +195,7 @@ exec --no-startup-id nm-applet &
 # xfce4 power manager
 exec --no-startup-id "xfce4-power-manager &"
 # launching udiskie |  removeable media automounter
-exec --no-start-up-id "udiskie -n -s &" 
+exec --no-start-up-id "udiskie -ns &" 
 # launching feh to set wallpaper
 exec --no-startup-id feh --randomize --bg-fill Pictures/wallpapers
 
